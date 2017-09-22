@@ -9,5 +9,8 @@
   },
   "dependencies": {
     "bulma": "^0.5.1"
+  },
+  "scripts": {
+    "deploy": "gulp && vendor/bin/jigsaw build production && git add build_production && git commit -m 'Build for production' && git subtree push --prefix build_production origin gh-pages"
   }
 }
